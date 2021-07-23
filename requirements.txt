@@ -8,10 +8,6 @@ seaborn==0.11.1
 sweetviz==2.1.3
 xgboost==1.4.2
 sklearn
-sklearn.ensemble
-sklearn.linear_model
-sklearn.neighbors
-sklearn.metrics
 catboost
-sklearn.model_selection
-sklearn.datasets
+
+
