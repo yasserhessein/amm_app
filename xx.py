@@ -2,7 +2,7 @@ import streamlit as st
 ##
 import numpy as np
 import pandas as pd
-import sweetviz as sv
+#import sweetviz as sv
 from xgboost import XGBClassifier
 from sklearn.ensemble import GradientBoostingClassifier
 from sklearn.linear_model import SGDClassifier
@@ -536,10 +536,10 @@ if uploaded_file is not None:
     st.markdown('**Correlation the Dataset**')
     st.write(df.corr().T)
 
-    Tr_report1 = sv.analyze(df)
+    #Tr_report1 = sv.analyze(df)
     #st.write(Tr_report1)
     #st.write(Tr_report1.show_notebook(w="80%", h="full"))
-    st.header(Tr_report1.show_html('Tr_report1.html'))
+    #st.header(Tr_report1.show_html('Tr_report1.html'))
     #st.header(sns.heatmap(df.corr(), annot=True, fmt='.0%'))
 
     ##================
@@ -586,9 +586,9 @@ else:
         st.markdown('**Correlation the Dataset**')
         st.write(df.corr().T)
 
-        Tr_report1 = sv.analyze(df)
+        #Tr_report1 = sv.analyze(df)
 
-        st.header(Tr_report1.show_html('Tr_report1.html'))
+        #st.header(Tr_report1.show_html('Tr_report1.html'))
 
 
         build_model(df)
