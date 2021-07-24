@@ -2,7 +2,7 @@ import streamlit as st
 ##
 import numpy as np
 import pandas as pd
-import sweetviz as sv
+#import sweetviz as sv
 from xgboost import XGBClassifier
 from sklearn.ensemble import GradientBoostingClassifier
 from sklearn.linear_model import SGDClassifier
