@@ -544,8 +544,8 @@ if uploaded_file is not None:
     st.write(df.corr().T)
 
     Tr_report1 = sv.analyze(df)
-    #st.write(Tr_report1)
-    #st.write(Tr_report1.show_notebook(w="80%", h="full"))
+    st.write(Tr_report1)
+    st.write(Tr_report1.show_notebook(w="80%", h="full"))
     st.header(Tr_report1.show_html('Tr_report1.html'))
     #st.header(sns.heatmap(df.corr(), annot=True, fmt='.0%'))
 
@@ -604,7 +604,7 @@ else:
 ##st.header("An owl")
 ##st.image("https://static.streamlit.io/examples/owl.jpg")
 
-#st.image('mlll.gif')
+st.image('mlll.gif')
 
 st.text(' The Machine Learning App By Yasir Huusein Shakir') 
 
