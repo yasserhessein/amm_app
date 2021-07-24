@@ -560,12 +560,12 @@ if uploaded_file is not None:
     #st.header(Tr_report1.show_html('Tr_report1.html'))
     
     ####
-    pr = ProfileReport(df, explorative=True)
+    #pr = ProfileReport(df, explorative=True)
      #st.header('*User Input DataFrame*')
-    st.write(df)
-    st.write('---')
-    st.header('*Exploratory Data Analysis Report Using Pandas Profiling*')
-    st_profile_report(pr)
+    #st.write(df)
+    #st.write('---')
+    #st.header('*Exploratory Data Analysis Report Using Pandas Profiling*')
+   # st_profile_report(pr)
     #st.header(sns.heatmap(df.corr(), annot=True, fmt='.0%'))
 
     ##================
