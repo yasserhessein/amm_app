@@ -15,8 +15,8 @@ from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import confusion_matrix, accuracy_score
 from sklearn.datasets import load_breast_cancer
-import pandas_profiling as pp
-
+from pandas_profiling import ProfileReport
+from streamlit_pandas_profiling import st_profile_report
 
 
 ##---------------
@@ -48,10 +48,13 @@ def build_model(df):
     st.info(Y.name)
     
     
-    
-    eda=pp.ProfileReport(df)
-    st.write(eda)
-    st.info(eda)
+     pr = ProfileReport(df, explorative=True)
+     #st.header('*User Input DataFrame*')
+     st.write(df)
+     st.write('---')
+     st.header('*Exploratory Data Analysis Report Using Pandas Profiling*')
+    st_profile_report(pr)
+
 ############################################
 
 
@@ -557,9 +560,12 @@ if uploaded_file is not None:
     #st.header(Tr_report1.show_html('Tr_report1.html'))
     
     ####
-    eda=pp.ProfileReport(df)
-    st.write(eda)
-    st.info(eda)
+     pr = ProfileReport(df, explorative=True)
+     #st.header('*User Input DataFrame*')
+     st.write(df)
+     st.write('---')
+     st.header('*Exploratory Data Analysis Report Using Pandas Profiling*')
+     st_profile_report(pr)
     #st.header(sns.heatmap(df.corr(), annot=True, fmt='.0%'))
 
     ##================
@@ -610,9 +616,12 @@ else:
 
         #st.header(Tr_report1.show_html('Tr_report1.html'))
         
-        eda=pp.ProfileReport(df)
-        st.write(eda)
-        st.info(eda)
+        pr = ProfileReport(df, explorative=True)
+        #st.header('*User Input DataFrame*')
+        st.write(df)
+        st.write('---')
+        st.header('*Exploratory Data Analysis Report Using Pandas Profiling*')
+        st_profile_report(pr) 
 
 
         build_model(df)
