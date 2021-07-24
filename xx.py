@@ -604,7 +604,7 @@ else:
 ##st.header("An owl")
 ##st.image("https://static.streamlit.io/examples/owl.jpg")
 
-st.image('mlll.gif')
+#st.image('mlll.gif')
 
 st.text(' The Machine Learning App By Yasir Huusein Shakir') 
 
