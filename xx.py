@@ -52,7 +52,7 @@ def build_model(df):
      #st.header('*User Input DataFrame*')
     st.write(df)
     st.write('---')
-    st.header('*Exploratory Data Analysis Report Using Pandas Profiling*')
+    st.header('*Exploratory Data Analysis Report*')
     st_profile_report(pr)
 
 ############################################
@@ -620,7 +620,7 @@ else:
         #st.header('*User Input DataFrame*')
         st.write(df)
         st.write('---')
-        st.header('*Exploratory Data Analysis Report Using Pandas Profiling*')
+        st.header('*Exploratory Data Analysis Report*')
         st_profile_report(pr) 
 
 
