@@ -15,6 +15,8 @@ from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import confusion_matrix, accuracy_score
 from sklearn.datasets import load_breast_cancer
+import pandas_profiling as pp
+
 
 
 ##---------------
@@ -543,10 +545,14 @@ if uploaded_file is not None:
     st.markdown('**Correlation the Dataset**')
     st.write(df.corr().T)
 
-    Tr_report1 = sv.analyze(df)
-    st.write(Tr_report1)
-    st.write(Tr_report1.show_notebook(w="80%", h="full"))
-    st.header(Tr_report1.show_html('Tr_report1.html'))
+    #Tr_report1 = sv.analyze(df)
+   # st.write(Tr_report1)
+    #st.write(Tr_report1.show_notebook(w="80%", h="full"))
+    #st.header(Tr_report1.show_html('Tr_report1.html'))
+    
+    ####
+    eda=pp.ProfileReport(df)
+    st.write(eda)
     #st.header(sns.heatmap(df.corr(), annot=True, fmt='.0%'))
 
     ##================
@@ -593,9 +599,12 @@ else:
         st.markdown('**Correlation the Dataset**')
         st.write(df.corr().T)
 
-        Tr_report1 = sv.analyze(df)
+        #Tr_report1 = sv.analyze(df)
 
-        st.header(Tr_report1.show_html('Tr_report1.html'))
+        #st.header(Tr_report1.show_html('Tr_report1.html'))
+        
+        eda=pp.ProfileReport(df)
+        st.write(eda)
 
 
         build_model(df)
