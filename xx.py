@@ -46,6 +46,12 @@ def build_model(df):
     st.info(list(X.columns))
     st.write('Y variable')
     st.info(Y.name)
+    
+    
+    
+    eda=pp.ProfileReport(df)
+    st.write(eda)
+    st.info(eda)
 ############################################
 
 
@@ -553,6 +559,7 @@ if uploaded_file is not None:
     ####
     eda=pp.ProfileReport(df)
     st.write(eda)
+    st.info(eda)
     #st.header(sns.heatmap(df.corr(), annot=True, fmt='.0%'))
 
     ##================
@@ -605,6 +612,7 @@ else:
         
         eda=pp.ProfileReport(df)
         st.write(eda)
+        st.info(eda)
 
 
         build_model(df)
