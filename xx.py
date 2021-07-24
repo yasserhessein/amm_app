@@ -48,12 +48,12 @@ def build_model(df):
     st.info(Y.name)
     
     
-     pr = ProfileReport(df, explorative=True)
+    pr = ProfileReport(df, explorative=True)
      #st.header('*User Input DataFrame*')
-     st.write(df)
-     st.write('---')
-     st.header('*Exploratory Data Analysis Report Using Pandas Profiling*')
-     st_profile_report(pr)
+    st.write(df)
+    st.write('---')
+    st.header('*Exploratory Data Analysis Report Using Pandas Profiling*')
+    st_profile_report(pr)
 
 ############################################
 
