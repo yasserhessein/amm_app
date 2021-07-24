@@ -53,7 +53,7 @@ def build_model(df):
      st.write(df)
      st.write('---')
      st.header('*Exploratory Data Analysis Report Using Pandas Profiling*')
-    st_profile_report(pr)
+     st_profile_report(pr)
 
 ############################################
 
